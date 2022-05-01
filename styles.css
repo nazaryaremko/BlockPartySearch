@@ -1,0 +1,13 @@
+body {
+    background-image: url("image.png");
+    background-size: 150px 100px;
+}
+
+#container {
+    padding: 50px;
+}
+
+#form {
+    padding: 20px;
+    background-color: aliceblue;
+}

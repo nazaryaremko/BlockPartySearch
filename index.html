@@ -1,0 +1,30 @@
+<html>
+    <head> <script src="index.js" defer></script> 
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body> 
+        <div id = 'container'> 
+            <div id='form' >
+                <h5>Please, input a name of a neighborhood where you want to find a block party:</h5>
+                <input type="input" name="name" id="neighborhood" placeholder = 'i.e. Kreuzberg' required/> 
+                <label for="time">
+                    <input type="checkbox" id="time" name="time" value="yes">  Display only the events that are happening right now 
+                </label>
+                <button onclick="getEntries()" id='submit'> Search </button> 
+            </div>
+
+            <table id='table' class="table table-primary table-striped">
+                <tr class='header'>
+                    <th class="header">Neighbourhood</th>
+                    <th class="header">Address</th>
+                    <th class="header">Start Date</th>
+                    <th class="header">End Date</th>
+                    <th class="header">Opening Times</th>
+                    <th class="header">Website</th>
+                  </tr> 
+            </table>
+        </div>
+    </body>
+    
+</html>
