@@ -21,7 +21,6 @@ async function getEntries() {
     //fetch the data
     const data = await getData();
     var entries = [];
-
     //creating a list of lists - each list is an event (we select only relevant columns)
     for (let i = 0; i < data['index'].length; i++) {
         var party = [];
@@ -39,6 +38,10 @@ async function getEntries() {
         entries = filterByPlace(filterByTime(entries))
     } else {
         entries = filterByPlace(entries)
+    }
+
+    if (entries.length === 0) {
+      alert('Woopsie! No events - try another neighborhood 😬')
     }
 
     //here we create html elements to fill in the table with our selected entries
